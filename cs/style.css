@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/img4.jpg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.counter {
+  display: none;
+  flex-wrap: wrap;
+  opacity: 0;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100vh;
+}
+
+.counter div {
+  display: flex;
+  align-items: center;
+  margin: 0.1rem 0rem;
+}
+
+#agree-count,
+#disagree-count {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 20px;
+  color: cornsilk;
+}
+
+#agree-count,
+.agree-counter span {
+  background-color: #01c853;
+}
+
+#disagree-count,
+.disagree-counter span {
+  background-color: #ed1b24;
+}
+
+.agree-counter span,
+.disagree-counter span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 20px;
+  color: cornsilk;
+  margin-left: 1rem;
+}
+
+.counter-btn {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  left: 50%;
+  top: 0%;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+}
+
+.counter-btn img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.counter-btn .agree-box {
+  position: absolute;
+  top: 67%;
+  left: -111.5%;
+  font-size: 2rem;
+  background-color: #01c853;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 1rem 7rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.counter-btn .disagree-box {
+  position: absolute;
+  top: 67%;
+  left: -119.5%;
+  font-size: 2rem;
+  background-color: #ed1b24;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 1rem 6rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.thank_u_message {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -310%);
+  width: 50%;
+  font-size: 80%;
+  transition: 1s all;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  opacity: 1;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  color: white;
+  background: black;
+  line-height: 2.6;
+}
+
+.thank_u_message.active {
+  top: 50%;
+  z-index: 5;
+  opacity: 1;
+}
+
+.agree-box.active,
+.disagree-box.active {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  opacity: 1;
+}
+
+@media screen and (max-width: 950px) {
+  .counter-btn {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 470px) {
+  .thank_u_message {
+    transform: translate(-50%, -50%);
+  }
+}/*# sourceMappingURL=style.css.map */
